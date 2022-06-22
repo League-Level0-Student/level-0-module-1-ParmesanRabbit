@@ -17,9 +17,16 @@ void setup() {
   ellipse(250, 250, 250, 250);
 }
 void draw() {
-  if(mousePressed) {
-     image(pepperoni,280,200);
-     image(olive,200,290);
-     image(mushroom,220,170);
+  if(mousePressed&&mouseButton==LEFT) {
+     image(pepperoni,mouseX,mouseY);
+  }
+    
+     
+  if(mousePressed&&mouseButton==RIGHT) {
+    image(olive,mouseX,mouseY);
+  }
+    
+  if(mousePressed&&mouseButton==CENTER) {
+     image(mushroom,mouseX,mouseY);
   }
 }
